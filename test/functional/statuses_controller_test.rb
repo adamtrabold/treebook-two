@@ -19,7 +19,8 @@ class StatusesControllerTest < ActionController::TestCase
 
   test "should render the new page when logged in" do
     sign_in users(:adam)
-    get :newassert_response :success
+    get :new
+    assert_response :success
   end
 
   test "should create status" do
