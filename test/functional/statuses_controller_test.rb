@@ -29,7 +29,7 @@ class StatusesControllerTest < ActionController::TestCase
     assert_redirected_to new_user_session_path
   end
 
-  test "should be logged in to edit statuses" do
+  test "should get edit when logged in" do
     sign_in users(:adam)
     get :edit, id: @status
     assert_response :success
